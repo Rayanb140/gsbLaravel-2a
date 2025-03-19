@@ -1,0 +1,120 @@
+/* Menu latéral - copié exactement de gestionnaire.css */
+#menuGauche {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 70px; /* Ajusté pour s'adapter à l'en-tête du visiteur */
+    bottom: 0;
+    left: 0;
+}
+
+#infosUtil {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+#menuList {
+    list-style-type: none;
+}
+
+#menuList li {
+    margin-bottom: 5px;
+}
+
+#menuList a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+#menuList a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #3498db;
+}
+
+#menuList a.active {
+    background-color: rgba(52, 152, 219, 0.2);
+    border-left-color: #3498db;
+    color: #fff;
+}
+
+#menuList a i:first-child {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.fa-chevron-down {
+    margin-left: auto !important;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    font-size: 14px !important;
+}
+
+#menuList a:hover .fa-chevron-down {
+    opacity: 1;
+}
+
+#menuList a.active .fa-chevron-down {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* Style pour le nom d'utilisateur */
+#menuList strong {
+    display: block;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: #3498db;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    margin-top: 0;
+    display: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid rgba(52, 152, 219, 0.5);
+}
+
+.submenu li:first-child {
+    margin-top: 5px;
+}
+
+.submenu a {
+    padding: 10px 20px 10px 45px !important;
+    font-size: 14px !important;
+    opacity: 0.9;
+}
+
+.submenu a.active {
+    background-color: rgba(52, 152, 219, 0.3) !important;
+}
+
+.submenu a:hover {
+    padding-left: 48px !important;
+}
+
+.deconnexion-link {
+    color: #e74c3c !important;
+    margin-top: 15px !important;
+}
+
+.deconnexion-link:hover {
+    background-color: rgba(231, 76, 60, 0.1) !important;
+    border-left-color: #e74c3c !important;
+} 

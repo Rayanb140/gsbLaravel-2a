@@ -1,0 +1,522 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+}
+
+/* En-tête */
+#entete {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Structure principale */
+#main {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+/* Menu latéral */
+#menuGauche {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#infosUtil {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+#menuList {
+    list-style-type: none;
+}
+
+#menuList li {
+    margin-bottom: 5px;
+}
+
+#menuList a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+#menuList a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #3498db;
+}
+
+#menuList a.active {
+    background-color: rgba(52, 152, 219, 0.2);
+    border-left-color: #3498db;
+    color: #fff;
+}
+
+#menuList a i:first-child {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.smenu {
+    margin-top: 10px;
+}
+
+.submenu {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    margin-top: 0;
+    display: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid rgba(52, 152, 219, 0.5);
+}
+
+.submenu li:first-child {
+    margin-top: 5px;
+}
+
+.submenu a {
+    padding: 10px 20px 10px 45px !important;
+    font-size: 14px !important;
+    opacity: 0.9;
+}
+
+.submenu a.active {
+    background-color: rgba(52, 152, 219, 0.3) !important;
+}
+
+.submenu a:hover {
+    padding-left: 48px !important;
+}
+
+/* Zone de contenu */
+#contenu {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f7fa;
+    animation: fadeIn 0.3s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#contenu h2 {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Pied de page */
+#footer {
+    background-color: #2c3e50;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+.deconnexion-link {
+    color: #e74c3c !important;
+    margin-top: 15px !important;
+}
+
+.deconnexion-link:hover {
+    background-color: rgba(231, 76, 60, 0.1) !important;
+    border-left-color: #e74c3c !important;
+}
+
+/* Boîte de dialogue */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.dialog-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.dialog-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.dialog-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.dialog-btn-cancel {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.dialog-btn-cancel:hover {
+    background-color: #d0d0d0;
+}
+
+.dialog-btn-confirm {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.dialog-btn-confirm:hover {
+    background-color: #c0392b;
+}
+
+/* Style unifié pour tous les tableaux de données */
+.listeLegere, .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.listeLegere th, .data-table th,
+.listeLegere td, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.listeLegere th, .data-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+}
+
+.listeLegere tr:hover, .data-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.listeLegere tr:last-child, .data-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Style des actions dans les tableaux */
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3498db;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.action-link:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #2980b9;
+}
+
+.action-link i {
+    margin-right: 5px;
+}
+
+/* Styles pour le menu */
+.submenu {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* Style pour les liens actifs */
+#menuList a.active {
+    background-color: rgba(52, 152, 219, 0.2);
+    border-left-color: #3498db;
+    color: #fff;
+}
+
+/* Style pour l'icône de flèche */
+.fa-chevron-down {
+    margin-left: auto !important;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    font-size: 14px !important;
+}
+
+#menuList a:hover .fa-chevron-down {
+    opacity: 1;
+}
+
+#menuList a.active .fa-chevron-down {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* Style pour le nom d'utilisateur */
+#menuList strong {
+    display: block;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: #3498db;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Styles de titres uniformes */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* Styles pour les formulaires */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    color: #3498db;
+    font-weight: 500;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.corpsForm {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+}
+
+.corpsForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.corpsForm input[type="text"],
+.corpsForm input[type="number"],
+.corpsForm input[type="date"],
+.corpsForm input[type="password"],
+.corpsForm input[type="email"],
+.corpsForm textarea,
+.corpsForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.piedForm {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.piedForm input[type="submit"],
+.piedForm input[type="reset"],
+.piedForm button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.piedForm input[type="submit"],
+.piedForm button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+.piedForm input[type="reset"],
+.piedForm button[type="reset"] {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.mandatory {
+    color: #e74c3c;
+}
+
+.form-note {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Améliorations du formulaire */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.form-container form {
+    width: 100%;
+}
+
+.form-container .corpsForm {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.piedForm {
+    text-align: center; /* Centrer les boutons au lieu de les aligner à droite */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Style amélioré pour le bouton "Retour à la liste" */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    color: #2c3e50;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #e8e8e8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.btn-secondary i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Amélioration des boutons */
+.piedForm input[type="submit"],
+.piedForm input[type="reset"] {
+    padding: 12px 25px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.piedForm input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+.piedForm input[type="reset"] {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.piedForm input[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.piedForm input[type="reset"]:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} 

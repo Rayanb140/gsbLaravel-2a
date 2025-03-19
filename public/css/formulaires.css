@@ -1,0 +1,201 @@
+/* Styles pour les formulaires */
+#contenu .corpsForm {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contenu .fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+#contenu .legend {
+    color: #3498db;
+    font-weight: 500;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#contenu .corpsForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+#contenu .corpsForm input[type="text"],
+#contenu .corpsForm input[type="number"],
+#contenu .corpsForm input[type="date"],
+#contenu .corpsForm input[type="password"],
+#contenu .corpsForm input[type="email"],
+#contenu .corpsForm textarea,
+#contenu .corpsForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+#contenu .corpsForm input[type="text"]:focus,
+#contenu .corpsForm input[type="number"]:focus,
+#contenu .corpsForm input[type="date"]:focus,
+#contenu .corpsForm input[type="password"]:focus,
+#contenu .corpsForm input[type="email"]:focus,
+#contenu .corpsForm textarea:focus,
+#contenu .corpsForm select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+#contenu .piedForm {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#contenu .piedForm input[type="submit"],
+#contenu .piedForm input[type="reset"],
+#contenu .piedForm button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#contenu .piedForm input[type="submit"],
+#contenu .piedForm button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+#contenu .piedForm input[type="reset"],
+#contenu .piedForm button[type="reset"] {
+    background-color: #95a5a6;
+    color: white;
+}
+
+#contenu .piedForm input[type="submit"]:hover,
+#contenu .piedForm button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+#contenu .piedForm input[type="reset"]:hover,
+#contenu .piedForm button[type="reset"]:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+/* Styles pour les messages d'info et d'erreur */
+#contenu .info-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-left: 5px solid #28a745;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+#contenu .info-box h3 {
+    color: #28a745;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#contenu .error-message {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 3px solid #e74c3c;
+    border-radius: 3px;
+}
+
+#contenu .success-message {
+    color: #27ae60;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(39, 174, 96, 0.1);
+    border-left: 3px solid #27ae60;
+    border-radius: 3px;
+}
+
+/* Style pour les champs obligatoires */
+#contenu .mandatory {
+    color: #e74c3c;
+}
+
+/* Notes et explications */
+#contenu .form-note {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Ajouter cette classe englobante pour les formulaires */
+#contenu .ajoutVisiteurForm {
+    margin-bottom: 30px;
+}
+
+#contenu .ajoutVisiteurForm .corpsForm {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+}
+
+#contenu .ajoutVisiteurForm fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+#contenu .ajoutVisiteurForm legend {
+    color: #3498db;
+    font-weight: 500;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#contenu .ajoutVisiteurForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+#contenu .ajoutVisiteurForm input[type="text"],
+#contenu .ajoutVisiteurForm input[type="number"],
+#contenu .ajoutVisiteurForm input[type="date"],
+#contenu .ajoutVisiteurForm input[type="password"],
+#contenu .ajoutVisiteurForm input[type="email"],
+#contenu .ajoutVisiteurForm textarea,
+#contenu .ajoutVisiteurForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+/* Et continuer avec les autres règles CSS du fichier, en ajoutant toujours le préfixe */ 
